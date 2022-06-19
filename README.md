@@ -8,7 +8,7 @@ yarn start
 wallet address and private key are hard coded inside constants
 
 for testing: 
--- add wallet address to send FAU to 
+-- add wallet address to send FAU to (there is default already stored)
 -- enter amount 
 -- press approve button 
 -- if accepted, press transfer
