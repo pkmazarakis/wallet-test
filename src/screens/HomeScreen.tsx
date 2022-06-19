@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
 import "@ethersproject/shims";
 import { ethers } from "ethers";
 import { Text } from "react-native-paper";
