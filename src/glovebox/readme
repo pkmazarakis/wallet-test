@@ -1,0 +1,3 @@
+//Glovebox is where I put all my custom react-native-paper components to style them
+//If I have different Texts: Title, Headers, Subtitle
+//I would customize the Text component to make it dynamic
