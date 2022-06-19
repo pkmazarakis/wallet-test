@@ -9,7 +9,6 @@ import StyleGuide from "../StyleGuide";
 import Transaction from "../components/Transaction";
 import React from "react";
 import { useEffect, useState } from "react";
-import { setBackgroundColorAsync } from "expo-system-ui";
 import {
   token_address,
   ERC20_ABI,
@@ -17,35 +16,9 @@ import {
   wallet_address,
 } from "../constants";
 
-const DATA = [
-  {
-    name: "Solana",
-    abbreviation: "SOL",
-    usdAmount: 100,
-    numTokens: 10,
-    image: "solana-logo.png",
-  },
-  {
-    name: "Solana",
-    abbreviation: "ETG",
-    usdAmount: 100,
-    numTokens: 10,
-    image: "solana-logo.png",
-  },
-  {
-    name: "Solana",
-    abbreviation: "FAU",
-    usdAmount: 100,
-    numTokens: 10,
-    image: "solana-logo.png",
-  },
-];
-
 export default function HomeScreen({ navigation }: RootTabScreenProps<"Home">) {
   const [fau, setFau] = useState([]);
   const [eth, setEth] = useState([]);
-  const [loaded, setLoaded] = useState(false);
-  const [recipientAddress, setRecipientAddress] = useState("");
 
   const getFAU = async () => {
     const contract = new ethers.Contract(token_address, ERC20_ABI, provider);
