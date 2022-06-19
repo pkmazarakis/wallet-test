@@ -90,7 +90,6 @@ export default function Transaction({
       .catch((error: any) => {
         setActionError(error.message);
         setLoadingTransfer(false);
-        console.log(error);
       });
     await transaction.wait();
     handleReloadHome();
@@ -101,8 +100,6 @@ export default function Transaction({
       setTransactionSuccess(false);
     }, 3000);
     setLoadingTransfer(false);
-
-    console.log(transaction);
   };
 
   const approve_transaction = async () => {
@@ -110,7 +107,6 @@ export default function Transaction({
 
     const approval = await contract.approve(wallet_address, token_amount);
     await approval.wait();
-    console.log(approval);
   };
 
   //in case developer wants to send ETH instead of FAU. Increase the scope to transferring different tokens

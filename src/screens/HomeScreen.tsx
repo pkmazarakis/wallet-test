@@ -62,10 +62,6 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<"Home">) {
       usdAmount: 100,
       image: "ethereum-logo.png",
     });
-    console.log(`\nReading from ${token_address}`);
-    console.log(`Name: ${name}`);
-    console.log(`Abbreviation: ${abbreviation}`);
-    console.log(`Num Tokens: ${ethers.utils.formatEther(numTokens)}`);
   };
 
   const getEthereum = async () => {
