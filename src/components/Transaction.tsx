@@ -137,7 +137,7 @@ export default function Transaction({
         activeOutlineColor={StyleGuide.Colors.primary}
         underlineColor={StyleGuide.Colors.primary}
         error={addressError}
-        value={"0xcdc53223339F57545DC73509E7b9d54F90959aDF"}
+        value={address}
         onChangeText={(text) => {
           setAddress(text);
           setAddressError(false);
@@ -177,6 +177,7 @@ export default function Transaction({
           style={styles.button}
           loading={loadingApprove}
           icon={approved ? "check" : null}
+          labelStyle={styles.label}
           onPress={() => {
             if (amount !== "" && address !== "") {
               setLoadingApprove(true);
@@ -210,6 +211,7 @@ export default function Transaction({
                 : StyleGuide.Colors.secondary,
             borderRadius: 100,
           }}
+          labelStyle={styles.label}
           icon={transactionSuccess ? "check" : null}
           loading={loadingTransfer}
           onPress={() => {
@@ -272,4 +274,5 @@ const styles = StyleSheet.create({
     color: StyleGuide.Colors.primary,
     marginBottom: StyleGuide.Spacing.small,
   },
+  label: { color: StyleGuide.Colors.primary },
 });
