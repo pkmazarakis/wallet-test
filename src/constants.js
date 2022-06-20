@@ -23,3 +23,9 @@ export const ERC20_ABI = [
 export const wallet = new ethers.Wallet(private_key, provider);
 
 export const contract = new ethers.Contract(token_address, ERC20_ABI, provider);
+
+export const token_signer = wallet.connect(provider);
+
+export const API_KEY_TOKEN = "QKVK1V4W44FYATBHV98CMUC9V1UUQVA69A";
+
+export const ENDPOINT_URL = "https://api-rinkeby.etherscan.io/api";
